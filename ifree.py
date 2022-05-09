@@ -1,15 +1,20 @@
-diskArray=[10,50,9,802,907,56,4596,45,86,49,73,69,12,345,671,159,753,123,456,741,951,852,638]
-arr=[12,10,8,6,4,3,2,1]
-print("Before process contents of both array are \n ",diskArray,"\n",arr)
-length=len(arr)
+diskArray = [10,20,30,1,5,2,63,3,50,23,36,6,31,32,52,90,60,96,552,22,31,2566,34,69,15,236,2454,3665,14,24]
+arr = [12,10,8,7,6,5,3,2,5,3]
+print("Before process contents of both array are\n",diskArray,"\n",arr)
+length = len(arr)
 
-sizeOfArray=10
-print("Fix size of array full is 10 \n Size of given array is",length)
-x=int(input("Enter an element to insert : "))
+sizeOfArray = 10
+print("Fix size of array to became full is 10 \nSize of given array is ",length)
+x = int(input("Enter an element to insert "))
 
 if(sizeOfArray == length):
-    diskArray.append(x)
-else:
-    arr.append(x)
-    
-print("After Process succesfully content of both array is \n ",diskArray,"\n",arr)
+    temp = arr[0]
+    if(arr[0]<x):
+        arr[0] = x
+        diskArray.append(temp)
+    else:
+        diskArray.append(x)
+    else:
+        arr.append(x)
+
+print("After process successfully executed content of both array is\n",diskArray,"\n",arr)
